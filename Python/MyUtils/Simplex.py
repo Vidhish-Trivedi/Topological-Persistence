@@ -5,8 +5,8 @@ class Simplex:
         self.vertices = vertices
 
     def __str__(self) -> dict:
-        return {
+        return str({
             "discoveredAt": self.discoveredAt,
             "dimension": self.dimension,
             "vertices": self.vertices,
-        }
+        })

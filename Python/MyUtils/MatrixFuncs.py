@@ -1,4 +1,5 @@
 from .Simplex import Simplex
+from .Interval import Interval
 
 
 # Function to print a matrix.
@@ -85,3 +86,32 @@ def reduceMatrix(size: int, matrix: list) -> list:
                 lowPosition[low_idx] = i
 
     return matrix
+
+# Generating bar-code intervals.
+def generateBarCodeIntervals(filteration: list, matrix: list) -> list:
+        size = len(filteration)
+        barCode = []
+
+        whichColumn = [-1 for _ in range(0, size)]
+
+        for j in range(0, size):
+            j_column = matrix[j]
+            if (low(j_column) > -1):
+                whichColumn[low(j_column)] = j
+            
+
+        # Going through the columns.
+        for j in range(0, size):
+            # Calculatin index of low value.
+            l = low(matrix[j])
+
+            # // If there is no low value -> start is infinite
+            if (l < 0):
+                if (whichColumn[j] == -1):
+                    newInterval = Interval(filteration[j].dimension, filteration[j].discoveredAt, None)
+                else:
+                    newInterval = Interval(filteration[j].dimension, filteration[j].discoveredAt, filteration[whichColumn[j]].discoveredAt)
+                barCode.append(newInterval)
+        
+        return(barCode)
+                

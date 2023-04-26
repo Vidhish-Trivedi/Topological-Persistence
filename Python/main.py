@@ -1,6 +1,6 @@
 from MyUtils.Interval import Interval
 from MyUtils.Simplex import Simplex
-from MyUtils.MatrixFuncs import computeMatrix, reduceMatrix, printMatrix
+from MyUtils.MatrixFuncs import computeMatrix, reduceMatrix, printMatrix, generateBarCodeIntervals
 from operator import attrgetter
 
 FILE_PATH = "./tests/filtration.txt"
@@ -37,4 +37,10 @@ if __name__ == "__main__":
     print(f"Reducing border matrix ({num_simplices} x {num_simplices})...")
     matrix = reduceMatrix(size=num_simplices, matrix=matrix)
     printMatrix(matrix=matrix)
+
+    # Generating bar-code.
+    barCode = generateBarCodeIntervals(filteration=simplices, matrix=matrix)
+
+    for _ in barCode:
+        print(_)
 

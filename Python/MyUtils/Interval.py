@@ -9,6 +9,6 @@ class Interval:
 
     def __str__(self) -> dict:
         if self.isFinite:
-            return {"dimension": self.dimension, "Birth": self.start, "Death": self.end}
+            return f"'dimension': {self.dimension}, 'Birth': {self.start}, 'Death': {self.end}"
         else:
-            return {"dimension": self.dimension, "Birth": self.start, "Death": "inf"}
+            return f"'dimension': {self.dimension}, 'Birth': {self.start}, 'Death': inf"
