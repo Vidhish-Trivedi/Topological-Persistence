@@ -1,5 +1,5 @@
 class Interval:
-    def __init__(self, dimension: int, start: float, end: float):
+    def __init__(self, dimension, start, end):
         self.dimension = dimension
         self.start = start
         self.end = end
@@ -7,7 +7,7 @@ class Interval:
         if end == None:
             self.isFinite = False
 
-    def __str__(self) -> dict:
+    def __str__(self) -> str:
         if self.isFinite:
             return f"'dimension': {self.dimension}, 'Birth': {self.start}, 'Death': {self.end}"
         else:
