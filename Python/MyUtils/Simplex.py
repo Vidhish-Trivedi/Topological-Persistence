@@ -1,3 +1,5 @@
+# Class to represent a Simplex.
+
 class Simplex:
     def __init__(self, discoveredAt: float, dimension: int, vertices: set):
         self.discoveredAt = discoveredAt

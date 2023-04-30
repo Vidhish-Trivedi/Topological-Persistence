@@ -2,6 +2,8 @@ from MyUtils.Interval import Interval
 from MyUtils.Simplex import Simplex
 from operator import attrgetter
 
+# Class for generating persistance diagram.
+
 class Persistence:
     def __init__(self, FILE_PATH):
         self.M = []

@@ -1,3 +1,5 @@
+# Class to represent an Interval.
+
 class Interval:
     def __init__(self, dimension, start, end):
         self.dimension = dimension
