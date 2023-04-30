@@ -1,7 +1,5 @@
 from MyUtils.Persistence import Persistence
 import matplotlib.pyplot as plt
-import numpy as np
-import numbers
 
 FILE_PATH = "./tests/filtration.txt"
 
