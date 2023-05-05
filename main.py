@@ -1,7 +1,7 @@
 from MyUtils.Persistence import Persistence
 import matplotlib.pyplot as plt
 
-FILE_PATH = "./tests/filtration.txt"
+FILE_PATH = "./tests/torus.txt"
 
 if __name__ == "__main__":
     my_test = Persistence(FILE_PATH=FILE_PATH)
@@ -31,4 +31,9 @@ if __name__ == "__main__":
     plt.scatter(x, y, alpha=0.35)
     t = tuple(range(0, int(m + 10)))
     plt.plot(t, "r--")
+    plt.xlabel("Birth")
+    plt.ylabel("Death")
+    plt.title(f"Persistence Diagram")
+    plt.xticks([i for i in range(0, 50)])
+    plt.yticks([i for i in range(0, 50)])
     plt.show()
