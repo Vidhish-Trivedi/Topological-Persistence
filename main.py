@@ -1,7 +1,8 @@
 from MyUtils.Persistence import Persistence
 import matplotlib.pyplot as plt
+from math import ceil
 
-FILE_PATH = "./tests/torus.txt"
+FILE_PATH = "./tests/basic_example.txt"
 
 if __name__ == "__main__":
     my_test = Persistence(FILE_PATH=FILE_PATH)
@@ -14,6 +15,8 @@ if __name__ == "__main__":
 
     x = []
     y = []
+    x_betti = []
+    y_betti = []
     m = -1
     for _ in barCode:
         print(_)
@@ -24,16 +27,21 @@ if __name__ == "__main__":
 
     for i in range(0, len(y)):
         if(y[i] == None):
-            y[i] = m + 10       # Fix for INFINITY?
+            y[i] = 2*ceil(0.7*m) + 2
+            y_betti.append(2*ceil(0.7*m) + 2)
+            x_betti.append(x[i])
     plt.rcParams["figure.figsize"] = [7.50, 7.50]
     plt.rcParams["figure.autolayout"] = True
 
     plt.scatter(x, y, alpha=0.35)
+    plt.scatter(x_betti, y_betti, color='r')
     t = tuple(range(0, int(m + 10)))
     plt.plot(t, "r--")
     plt.xlabel("Birth")
     plt.ylabel("Death")
-    plt.title(f"Persistence Diagram")
-    plt.xticks([i for i in range(0, 50)])
-    plt.yticks([i for i in range(0, 50)])
+    plt.title(f"Persistence Diagram for " + FILE_PATH.split("tests/")[1].replace(".txt", ""))
+    plt.xticks([2*i for i in range(0, ceil(0.7*m))])
+    plt.yticks([2*i for i in range(0, ceil(0.7*m))])
+    img_path = "./plots/persistence_diagrams" + FILE_PATH.split("tests")[1].replace("txt", "png")
+    plt.savefig(img_path, bbox_inches='tight')
     plt.show()
