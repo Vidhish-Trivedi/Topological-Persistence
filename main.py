@@ -2,7 +2,7 @@ from MyUtils.Persistence import Persistence
 import matplotlib.pyplot as plt
 from math import ceil
 
-FILE_PATH = "./tests/GNUsphere5_out.txt"
+FILE_PATH = "./tests/GNUicosahedron_out.txt"
 
 if __name__ == "__main__":
     my_test = Persistence(FILE_PATH=FILE_PATH)

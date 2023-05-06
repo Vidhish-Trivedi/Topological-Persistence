@@ -1,4 +1,4 @@
-FILE_PATH = "./tests/GNUsphere5.txt"
+FILE_PATH = "./tests/GNUicosahedron.txt"
 v = 0
 e = 0
 f = 0
