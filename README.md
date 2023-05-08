@@ -30,16 +30,26 @@ pip install matplotlib
     * The second value denotes the dimension of the simplex which is being added, it is an integer value.
     * If the second value is d, then the following d - 1 values corresponds to the indices of vertices which make up the simplex.
     * For example, the line "6.0 2 1 4 7" denotes that a simplex with dimension 2 was discovered at time t = 6.0 and is formed using vertices with indices 1, 4 and 7.
+* Note: For using data from GNU surfaces triangulated library (https://gts.sourceforge.net/samples.html):
+    * First, download and extract the data from the above webpage.
+    * Second, copy the contents of the extracted file to a text file at /test/<file_name>.txt
+    * Third, open the my_parser.py file and edit the FILE_PATH variable to the new file.
+    * Finally, run my_parser.py by running the following in the project root:
+    ```bash
+    python my_parser.py
+    ```
+    * This will generate a new file, which will have the data formatted as per our requirement at /test/<file_name>_out.txt
+    * You can now use /test/<file_name>_out.txt as the FILE_PATH in main.py and run the project.
 
 ## Running the Project
+- Edit the FILE_PATH variable in main.py to select the data file (/tests directory).
 - Run the following in the project root:
-
 ```bash
 python main.py
 ```
 - This would output the border matrix, matrix obtained on reducing the border matrix, and the birth time and death time of topological features (simplices) as described in the algorithm.
 - In addition to this, the program also generates a persistence diagram for the chosen topological data.
-- This diagram is displayed to the user and is also saved in the diagrams/ directory (with filename as the current date-time).
+- This diagram is displayed to the user and is also saved in the /plots/persistence_diagrams directory (with filename as ).
 
 ## License
 
