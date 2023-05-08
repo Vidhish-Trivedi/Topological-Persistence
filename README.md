@@ -38,7 +38,7 @@ pip install matplotlib
     ```bash
     python my_parser.py
     ```
-    * This will generate a new file, which will have the data formatted as per our requirement at ./test/<file_name>_out.txt
+    * This will generate a new file, which will have the data formatted as per our requirement at ./tests/<file_name>_out.txt
     * You can now use ./tests/<file_name>_out.txt as the FILE_PATH in main.py and run the project.
 
 ## Running the Project
