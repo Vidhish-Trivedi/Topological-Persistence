@@ -1,4 +1,4 @@
-FILE_PATH = "./tests/GNUicosahedron.txt"
+FILE_PATH = "./tests/GNUTieFighter.txt"
 v = 0
 e = 0
 f = 0
