@@ -32,14 +32,14 @@ pip install matplotlib
     * For example, the line "6.0 2 1 4 7" denotes that a simplex with dimension 2 was discovered at time t = 6.0 and is formed using vertices with indices 1, 4 and 7.
 * Note: For using data from GNU surfaces triangulated library (https://gts.sourceforge.net/samples.html):
     * First, download and extract the data from the above webpage.
-    * Second, copy the contents of the extracted file to a text file at /test/<file_name>.txt
+    * Second, copy the contents of the extracted file to a text file at ./tests/<file_name>.txt
     * Third, open the my_parser.py file and edit the FILE_PATH variable to the new file.
     * Finally, run my_parser.py by running the following in the project root:
     ```bash
     python my_parser.py
     ```
-    * This will generate a new file, which will have the data formatted as per our requirement at /test/<file_name>_out.txt
-    * You can now use /test/<file_name>_out.txt as the FILE_PATH in main.py and run the project.
+    * This will generate a new file, which will have the data formatted as per our requirement at ./test/<file_name>_out.txt
+    * You can now use ./tests/<file_name>_out.txt as the FILE_PATH in main.py and run the project.
 
 ## Running the Project
 - Edit the FILE_PATH variable in main.py to select the data file (/tests directory).
@@ -48,8 +48,9 @@ pip install matplotlib
 python main.py
 ```
 - This would output the border matrix, matrix obtained on reducing the border matrix, and the birth time and death time of topological features (simplices) as described in the algorithm.
-- In addition to this, the program also generates a persistence diagram for the chosen topological data.
-- This diagram is displayed to the user and is also saved in the /plots/persistence_diagrams directory (with filename as ).
+- A log for the birth and death times of various cycles and their dimension is also saved in the ./plots/logs directory.
+- In addition to this, the program also generates a persistence diagram for the chosen topological data using matplotlib with which the user can interact.
+- This diagram is displayed to the user and is also saved in the ./plots/persistence_diagrams directory as an image file.
 
 ## License
 
