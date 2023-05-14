@@ -1,6 +1,0 @@
-'dimension': 0, 'Birth': 1.0, 'Death': inf
-'dimension': 0, 'Birth': 1.0, 'Death': 2.0
-'dimension': 0, 'Birth': 1.0, 'Death': 2.0
-'dimension': 0, 'Birth': 3.0, 'Death': 4.0
-'dimension': 1, 'Birth': 4.0, 'Death': inf
-'dimension': 1, 'Birth': 5.0, 'Death': 6.0
