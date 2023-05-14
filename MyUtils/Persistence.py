@@ -30,14 +30,9 @@ class Persistence:
             self.simplices, key=attrgetter("discoveredAt", "dimension")
         )
         self.num_simplices = len(self.simplices)
-        # print(* self.simplices)
 
-        print("Computing border matrix...")
+        print("Computing boundary matrix...")
         self.computeMatrix()
-
-        # print("Reducing border matrix...")
-        # self.reduceMatrix()
-        # printMatrix(self.M)
 
 
     # Generating border matrix.

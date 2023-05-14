@@ -1,4 +1,4 @@
-FILE_PATH = "./tests/GNUTieFighter.txt"
+FILE_PATH = "./tests/GNUcube.txt"
 v = 0
 e = 0
 f = 0

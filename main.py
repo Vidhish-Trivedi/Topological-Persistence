@@ -2,12 +2,12 @@ from MyUtils.Persistence import Persistence
 import matplotlib.pyplot as plt
 from math import ceil
 
-FILE_PATH = "./tests/GNUsphere20_out.txt"
+FILE_PATH = "./tests/GNUtetrahedron_out.txt"
 
 if __name__ == "__main__":
     my_test = Persistence(FILE_PATH=FILE_PATH)
 
-    print("Reducing border matrix...")
+    print("Reducing boundary matrix...")
     my_test.reduceMatrix()
 
     # Generating bar-code.
